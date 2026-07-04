@@ -1,2 +1,4 @@
 aiogram==3.13.1
 python-dotenv
+rich
+flask
