@@ -145,8 +145,7 @@ def log_event(user, action, details="", status="OK"):
 bot = Bot(token=config.TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
 
-# Запускаем фоновый пинг в отдельной задаче
-# asyncio.create_task(ping_self())
+# (Пинг запускается внутри main() – см. ниже)
 
 # ------------------------------------------------------------
 # 6. УВЕДОМЛЕНИЕ АДМИНА (копия)
@@ -430,11 +429,6 @@ async def handle_file(m: Message) -> None:
 # 11. ЗАПУСК
 # ------------------------------------------------------------
 async def main() -> None:
-    print_banner()
-    add_log("[bold green]✅ Бот запущен и готов к работе![/]")
-    add_log("[dim]─────────────────────────────────────────────────────────────[/]")
-    logger.info("Bot starting... Admin ID: %s", config.ADMIN_ID)
-    async def main() -> None:
     print_banner()
     add_log("[bold green]✅ Бот запущен и готов к работе![/]")
     add_log("[dim]─────────────────────────────────────────────────────────────[/]")
