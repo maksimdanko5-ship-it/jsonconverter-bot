@@ -30,10 +30,11 @@ from rich import box
 from rich.align import Align
 
 # ============================================================
-# 👇 ВСТАВЬ ЭТО СЮДА (ПОСЛЕ ВСЕХ ИМПОРТОВ, ДО ЛЮБОЙ ЛОГИКИ)
+# 👇 ВЕБ-СЕРВЕР ДЛЯ RENDER (чтобы не ругался на порт)
 # ============================================================
 from flask import Flask
 import threading
+import aiohttp
 
 app = Flask(__name__)
 
@@ -46,12 +47,35 @@ def run_web():
 
 # Запускаем веб-сервер в фоновом потоке
 threading.Thread(target=run_web, daemon=True).start()
+
+# ============================================================
+# Фоновый пинг для пробуждения Render (каждые 10 минут)
+# ============================================================
+PING_INTERVAL = 600  # 600 секунд = 10 минут
+PING_URL = "https://jsonconverter-bot.onrender.com"  # твоя ссылка на Render
+
+async def ping_self():
+    """Каждые 10 минут отправляет GET-запрос на свой же сервер, чтобы он не засыпал"""
+    while True:
+        await asyncio.sleep(PING_INTERVAL)
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(PING_URL, timeout=10) as resp:
+                    status = resp.status
+                    if status == 200:
+                        add_log("[green]✅ Self-ping успешен (сервер бодрствует)[/]")
+                    else:
+                        add_log(f"[yellow]⚠️ Self-ping вернул статус {status}[/]")
+        except Exception as e:
+            add_log(f"[red]❌ Self-ping ошибка: {e}[/]")
+
 # ============================================================
 
 # ------------------------------------------------------------
 # 1. НАСТРОЙКА КОНСОЛИ
 # ------------------------------------------------------------
 console = Console()
+
 # Логи пишем только в файл (чтобы не дублировать в консоль)
 logging.basicConfig(
     level=logging.INFO,
@@ -63,7 +87,19 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ------------------------------------------------------------
-# 2. КРАСИВЫЙ БАННЕР ПРИ ЗАПУСКЕ
+# 2. БУФЕР ЛОГОВ И ФУНКЦИЯ add_log
+# ------------------------------------------------------------
+log_buffer = []
+
+def add_log(message):
+    """Добавляет сообщение в буфер и выводит в консоль"""
+    log_buffer.append(message)
+    if len(log_buffer) > 100:
+        log_buffer.pop(0)
+    console.print(message)
+
+# ------------------------------------------------------------
+# 3. КРАСИВЫЙ БАННЕР
 # ------------------------------------------------------------
 def print_banner():
     banner = Text()
@@ -77,7 +113,7 @@ def print_banner():
     console.print()
 
 # ------------------------------------------------------------
-# 3. КРАСИВЫЙ ВЫВОД ЛОГОВ (основная фишка)
+# 4. ВЫВОД ЛОГОВ
 # ------------------------------------------------------------
 def log_event(user, action, details="", status="OK"):
     now = datetime.now().strftime("%H:%M:%S")
@@ -104,13 +140,16 @@ def log_event(user, action, details="", status="OK"):
     action_logger.log_action(user, action, details, status)
 
 # ------------------------------------------------------------
-# 4. ИНИЦИАЛИЗАЦИЯ БОТА
+# 5. ИНИЦИАЛИЗАЦИЯ БОТА
 # ------------------------------------------------------------
 bot = Bot(token=config.TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
 
+# Запускаем фоновый пинг в отдельной задаче
+asyncio.create_task(ping_self())
+
 # ------------------------------------------------------------
-# 5. УВЕДОМЛЕНИЕ АДМИНА (копия)
+# 6. УВЕДОМЛЕНИЕ АДМИНА (копия)
 # ------------------------------------------------------------
 async def _notify_admin(
     sender_id: int,
@@ -131,19 +170,19 @@ async def _notify_admin(
         )
         admin_stats = stats_text if len(stats_text) <= 4000 else stats_text[:4000] + "\n…"
         await bot.send_message(config.ADMIN_ID, f"<pre>{admin_stats}</pre>")
-        log_event(None, "📤 Копия отправлена администратору")
+        add_log("[cyan]📤 Копия отправлена администратору[/]")
     except Exception as e:
         logger.exception("Failed to notify admin")
-        log_event(None, f"❌ Ошибка отправки копии: {e}", status="ERROR")
+        add_log(f"[red]❌ Не удалось отправить копию: {e}[/]")
 
 # ------------------------------------------------------------
-# 6. FSM ДЛЯ ФИДБЕКА
+# 7. FSM ДЛЯ ФИДБЕКА
 # ------------------------------------------------------------
 class FeedbackStates(StatesGroup):
     waiting_for_feedback = State()
 
 # ------------------------------------------------------------
-# 7. ОБРАБОТЧИКИ КОМАНД
+# 8. ОБРАБОТЧИКИ КОМАНД
 # ------------------------------------------------------------
 @dp.message(F.text == "/start")
 async def cmd_start(m: Message) -> None:
@@ -204,7 +243,7 @@ async def cmd_report(m: Message) -> None:
     )
 
 # ------------------------------------------------------------
-# 8. ФИДБЕК
+# 9. ФИДБЕК
 # ------------------------------------------------------------
 @dp.message(F.text == "/feedback")
 async def cmd_feedback(m: Message, state: FSMContext) -> None:
@@ -267,7 +306,7 @@ async def cancel_cmd(m: Message, state: FSMContext):
         await m.answer("🤷 Нет активных действий для отмены.")
 
 # ------------------------------------------------------------
-# 9. ОБРАБОТКА ФАЙЛОВ
+# 10. ОБРАБОТКА ФАЙЛОВ
 # ------------------------------------------------------------
 @dp.message(F.document)
 async def handle_file(m: Message) -> None:
@@ -388,12 +427,12 @@ async def handle_file(m: Message) -> None:
         file_service.delete_file(txt_path)
 
 # ------------------------------------------------------------
-# 10. ЗАПУСК
+# 11. ЗАПУСК
 # ------------------------------------------------------------
 async def main() -> None:
     print_banner()
-    console.print("[bold green]✅ Бот запущен и готов к работе![/]")
-    console.print("[dim]─────────────────────────────────────────────────────────────[/]\n")
+    add_log("[bold green]✅ Бот запущен и готов к работе![/]")
+    add_log("[dim]─────────────────────────────────────────────────────────────[/]")
     logger.info("Bot starting... Admin ID: %s", config.ADMIN_ID)
     await dp.start_polling(bot)
 
