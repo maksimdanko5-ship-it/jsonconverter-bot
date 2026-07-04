@@ -146,7 +146,7 @@ bot = Bot(token=config.TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.
 dp = Dispatcher()
 
 # Запускаем фоновый пинг в отдельной задаче
-asyncio.create_task(ping_self())
+# asyncio.create_task(ping_self())
 
 # ------------------------------------------------------------
 # 6. УВЕДОМЛЕНИЕ АДМИНА (копия)
@@ -434,6 +434,16 @@ async def main() -> None:
     add_log("[bold green]✅ Бот запущен и готов к работе![/]")
     add_log("[dim]─────────────────────────────────────────────────────────────[/]")
     logger.info("Bot starting... Admin ID: %s", config.ADMIN_ID)
+    async def main() -> None:
+    print_banner()
+    add_log("[bold green]✅ Бот запущен и готов к работе![/]")
+    add_log("[dim]─────────────────────────────────────────────────────────────[/]")
+    logger.info("Bot starting... Admin ID: %s", config.ADMIN_ID)
+    
+    # 👇 ЗАПУСКАЕМ ПИНГ ЗДЕСЬ (внутри event loop)
+    asyncio.create_task(ping_self())
+    add_log("[cyan]🔄 Self-ping запущен (каждые 10 минут)[/]")
+    
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
