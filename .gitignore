@@ -1,0 +1,7 @@
+"__pycache__/" 
+"venv/" 
+".env" 
+"*.log" 
+"actions_log.csv" 
+"users.json" 
+"temp/" 

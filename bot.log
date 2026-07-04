@@ -1,0 +1,1104 @@
+2026-07-04 18:20:43,238 [INFO] __main__: Bot starting... Admin ID: 7379594136
+2026-07-04 18:20:43,245 [INFO] aiogram.dispatcher: Start polling
+2026-07-04 18:20:43,889 [INFO] aiogram.dispatcher: Run polling for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 18:20:44,205 [INFO] aiogram.event: Update id=658108792 is not handled. Duration 110 ms by bot id=8918092936
+2026-07-04 18:20:44,206 [INFO] aiogram.event: Update id=658108793 is not handled. Duration 110 ms by bot id=8918092936
+2026-07-04 18:20:44,834 [INFO] aiogram.event: Update id=658108789 is not handled. Duration 735 ms by bot id=8918092936
+2026-07-04 18:20:44,835 [ERROR] aiogram.event: Cause exception while process update id=658108789 by bot id=8918092936
+TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+Traceback (most recent call last):
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 128, in cmd_start
+    await m.answer(
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 128, in check_response
+    raise TelegramForbiddenError(method=method, message=description)
+aiogram.exceptions.TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+2026-07-04 18:20:45,026 [INFO] aiogram.event: Update id=658108790 is not handled. Duration 922 ms by bot id=8918092936
+2026-07-04 18:20:45,027 [ERROR] aiogram.event: Cause exception while process update id=658108790 by bot id=8918092936
+TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+Traceback (most recent call last):
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 140, in cmd_stats
+    await m.answer(
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 128, in check_response
+    raise TelegramForbiddenError(method=method, message=description)
+aiogram.exceptions.TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+2026-07-04 18:20:45,194 [INFO] aiogram.event: Update id=658108791 is not handled. Duration 1094 ms by bot id=8918092936
+2026-07-04 18:20:45,194 [ERROR] aiogram.event: Cause exception while process update id=658108791 by bot id=8918092936
+TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+Traceback (most recent call last):
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 128, in cmd_start
+    await m.answer(
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 128, in check_response
+    raise TelegramForbiddenError(method=method, message=description)
+aiogram.exceptions.TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+2026-07-04 18:21:20,627 [INFO] aiogram.event: Update id=658108794 is handled. Duration 609 ms by bot id=8918092936
+2026-07-04 18:22:12,988 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2026-07-04 18:22:12,989 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8918092936)
+2026-07-04 18:22:35,024 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Multiple exceptions: [WinError 121] Превышен таймаут семафора, [WinError 1231] Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+2026-07-04 18:22:35,024 [WARNING] aiogram.dispatcher: Sleep for 1.421937 seconds and try again... (tryings = 1, bot id = 8918092936)
+2026-07-04 18:22:57,477 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Multiple exceptions: [WinError 1231] Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows, [WinError 121] Превышен таймаут семафора]
+2026-07-04 18:22:57,478 [WARNING] aiogram.dispatcher: Sleep for 1.785766 seconds and try again... (tryings = 2, bot id = 8918092936)
+2026-07-04 18:23:20,307 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Multiple exceptions: [WinError 121] Превышен таймаут семафора, [WinError 1231] Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+2026-07-04 18:23:20,308 [WARNING] aiogram.dispatcher: Sleep for 2.316626 seconds and try again... (tryings = 3, bot id = 8918092936)
+2026-07-04 18:23:43,681 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Multiple exceptions: [WinError 1231] Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows, [WinError 121] Превышен таймаут семафора]
+2026-07-04 18:23:43,682 [WARNING] aiogram.dispatcher: Sleep for 2.947741 seconds and try again... (tryings = 4, bot id = 8918092936)
+2026-07-04 18:24:07,665 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Multiple exceptions: [WinError 121] Превышен таймаут семафора, [WinError 1231] Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+2026-07-04 18:24:07,665 [WARNING] aiogram.dispatcher: Sleep for 3.824225 seconds and try again... (tryings = 5, bot id = 8918092936)
+2026-07-04 18:24:12,414 [INFO] aiogram.dispatcher: Connection established (tryings = 6, bot id = 8918092936)
+2026-07-04 18:24:12,525 [INFO] aiogram.event: Update id=658108795 is not handled. Duration 109 ms by bot id=8918092936
+2026-07-04 18:24:12,525 [INFO] aiogram.event: Update id=658108797 is not handled. Duration 109 ms by bot id=8918092936
+2026-07-04 18:24:12,980 [INFO] aiogram.event: Update id=658108796 is handled. Duration 561 ms by bot id=8918092936
+2026-07-04 18:24:13,005 [INFO] aiogram.event: Update id=658108799 is handled. Duration 577 ms by bot id=8918092936
+2026-07-04 18:24:13,207 [INFO] aiogram.event: Update id=658108798 is handled. Duration 797 ms by bot id=8918092936
+2026-07-04 18:24:29,233 [INFO] aiogram.event: Update id=658108800 is not handled. Duration 16 ms by bot id=8918092936
+2026-07-04 18:27:15,537 [INFO] aiogram.event: Update id=658108801 is handled. Duration 531 ms by bot id=8918092936
+2026-07-04 18:29:57,466 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-07-04 18:29:57,467 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8918092936)
+2026-07-04 18:30:19,511 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Multiple exceptions: [WinError 121] Превышен таймаут семафора, [WinError 1232] Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+2026-07-04 18:30:19,511 [WARNING] aiogram.dispatcher: Sleep for 1.170723 seconds and try again... (tryings = 1, bot id = 8918092936)
+2026-07-04 18:30:41,729 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Multiple exceptions: [WinError 1232] Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows, [WinError 121] Превышен таймаут семафора]
+2026-07-04 18:30:41,730 [WARNING] aiogram.dispatcher: Sleep for 1.661375 seconds and try again... (tryings = 2, bot id = 8918092936)
+2026-07-04 18:30:43,814 [INFO] aiogram.dispatcher: Connection established (tryings = 3, bot id = 8918092936)
+2026-07-04 18:30:43,821 [INFO] aiogram.event: Update id=658108802 is not handled. Duration 0 ms by bot id=8918092936
+2026-07-04 18:30:43,821 [INFO] aiogram.event: Update id=658108803 is not handled. Duration 0 ms by bot id=8918092936
+2026-07-04 18:33:26,393 [INFO] __main__: Processed file from user 7379594136 (Мак1Сим): 16 messages
+2026-07-04 18:33:26,403 [INFO] aiogram.event: Update id=658108804 is handled. Duration 3593 ms by bot id=8918092936
+2026-07-04 18:36:52,217 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2026-07-04 18:36:52,218 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8918092936)
+2026-07-04 18:37:04,531 [INFO] aiogram.dispatcher: Polling stopped
+2026-07-04 18:37:04,792 [INFO] aiogram.dispatcher: Polling stopped for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 18:37:21,274 [INFO] __main__: Bot starting... Admin ID: 7379594136
+2026-07-04 18:37:21,319 [INFO] aiogram.dispatcher: Start polling
+2026-07-04 18:37:22,996 [INFO] aiogram.dispatcher: Run polling for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 18:38:15,526 [INFO] aiogram.event: Update id=658108805 is handled. Duration 500 ms by bot id=8918092936
+2026-07-04 18:38:23,683 [INFO] __main__: Processed file from user 7379594136 (Мак1Сим): 16 messages
+2026-07-04 18:38:23,701 [INFO] aiogram.event: Update id=658108806 is handled. Duration 1375 ms by bot id=8918092936
+2026-07-04 18:38:41,117 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2026-07-04 18:38:41,117 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8918092936)
+2026-07-04 18:39:03,171 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-07-04 18:39:03,171 [WARNING] aiogram.dispatcher: Sleep for 1.190484 seconds and try again... (tryings = 1, bot id = 8918092936)
+2026-07-04 18:39:14,760 [INFO] aiogram.dispatcher: Connection established (tryings = 2, bot id = 8918092936)
+2026-07-04 18:41:17,014 [INFO] aiogram.event: Update id=658108807 is not handled. Duration 0 ms by bot id=8918092936
+2026-07-04 18:41:17,014 [ERROR] aiogram.event: Cause exception while process update id=658108807 by bot id=8918092936
+PermissionError: [Errno 13] Permission denied: 'actions_log.csv'
+Traceback (most recent call last):
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 130, in cmd_start
+    log_and_print(m.from_user, "Команда /start")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 80, in log_and_print
+    action_logger.log_action(user, action, details, status)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\action_logger.py", line 30, in log_action
+    with open(LOG_FILE, "a", newline="", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'actions_log.csv'
+2026-07-04 18:41:31,006 [INFO] aiogram.event: Update id=658108808 is not handled. Duration 14 ms by bot id=8918092936
+2026-07-04 18:41:31,006 [ERROR] aiogram.event: Cause exception while process update id=658108808 by bot id=8918092936
+PermissionError: [Errno 13] Permission denied: 'actions_log.csv'
+Traceback (most recent call last):
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 152, in cmd_instruction
+    log_and_print(m.from_user, "Команда /инструкция")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 80, in log_and_print
+    action_logger.log_action(user, action, details, status)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\action_logger.py", line 30, in log_action
+    with open(LOG_FILE, "a", newline="", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'actions_log.csv'
+2026-07-04 18:41:59,805 [INFO] aiogram.event: Update id=658108809 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:41:59,805 [ERROR] aiogram.event: Cause exception while process update id=658108809 by bot id=8918092936
+PermissionError: [Errno 13] Permission denied: 'actions_log.csv'
+Traceback (most recent call last):
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 130, in cmd_start
+    log_and_print(m.from_user, "Команда /start")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 80, in log_and_print
+    action_logger.log_action(user, action, details, status)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\action_logger.py", line 30, in log_action
+    with open(LOG_FILE, "a", newline="", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'actions_log.csv'
+2026-07-04 18:42:03,134 [INFO] aiogram.event: Update id=658108810 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:42:03,134 [ERROR] aiogram.event: Cause exception while process update id=658108810 by bot id=8918092936
+PermissionError: [Errno 13] Permission denied: 'actions_log.csv'
+Traceback (most recent call last):
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 130, in cmd_start
+    log_and_print(m.from_user, "Команда /start")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 80, in log_and_print
+    action_logger.log_action(user, action, details, status)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\action_logger.py", line 30, in log_action
+    with open(LOG_FILE, "a", newline="", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'actions_log.csv'
+2026-07-04 18:45:49,979 [INFO] aiogram.event: Update id=658108811 is handled. Duration 500 ms by bot id=8918092936
+2026-07-04 18:45:56,493 [INFO] aiogram.event: Update id=658108812 is handled. Duration 203 ms by bot id=8918092936
+2026-07-04 18:46:24,526 [INFO] aiogram.event: Update id=658108813 is handled. Duration 484 ms by bot id=8918092936
+2026-07-04 18:46:27,904 [INFO] aiogram.event: Update id=658108814 is handled. Duration 186 ms by bot id=8918092936
+2026-07-04 18:49:10,189 [INFO] aiogram.event: Update id=658108815 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:50:22,153 [INFO] aiogram.event: Update id=658108816 is handled. Duration 484 ms by bot id=8918092936
+2026-07-04 18:50:27,743 [INFO] aiogram.event: Update id=658108817 is handled. Duration 172 ms by bot id=8918092936
+2026-07-04 18:50:30,753 [INFO] aiogram.event: Update id=658108818 is handled. Duration 218 ms by bot id=8918092936
+2026-07-04 18:51:16,727 [INFO] aiogram.event: Update id=658108819 is handled. Duration 436 ms by bot id=8918092936
+2026-07-04 18:51:23,023 [INFO] aiogram.event: Update id=658108820 is handled. Duration 186 ms by bot id=8918092936
+2026-07-04 18:53:26,178 [INFO] aiogram.event: Update id=658108821 is handled. Duration 453 ms by bot id=8918092936
+2026-07-04 18:53:34,349 [INFO] aiogram.event: Update id=658108822 is handled. Duration 219 ms by bot id=8918092936
+2026-07-04 18:54:10,908 [INFO] aiogram.event: Update id=658108823 is handled. Duration 485 ms by bot id=8918092936
+2026-07-04 18:55:14,656 [INFO] aiogram.event: Update id=658108824 is handled. Duration 500 ms by bot id=8918092936
+2026-07-04 18:56:59,974 [INFO] aiogram.event: Update id=658108825 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:56:59,974 [INFO] aiogram.event: Update id=658108826 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:56:59,975 [INFO] aiogram.event: Update id=658108827 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:56:59,975 [INFO] aiogram.event: Update id=658108828 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:56:59,975 [INFO] aiogram.event: Update id=658108829 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:56:59,977 [INFO] aiogram.event: Update id=658108830 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:56:59,977 [INFO] aiogram.event: Update id=658108831 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:56:59,978 [INFO] aiogram.event: Update id=658108832 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:56:59,978 [INFO] aiogram.event: Update id=658108833 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:56:59,978 [INFO] aiogram.event: Update id=658108834 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:57:09,346 [INFO] aiogram.event: Update id=658108835 is handled. Duration 484 ms by bot id=8918092936
+2026-07-04 18:58:03,437 [INFO] aiogram.event: Update id=658108836 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:03,437 [INFO] aiogram.event: Update id=658108837 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:03,438 [INFO] aiogram.event: Update id=658108838 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:03,438 [INFO] aiogram.event: Update id=658108839 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:03,438 [INFO] aiogram.event: Update id=658108840 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:03,438 [INFO] aiogram.event: Update id=658108841 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:03,438 [INFO] aiogram.event: Update id=658108842 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:03,439 [INFO] aiogram.event: Update id=658108843 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:03,439 [INFO] aiogram.event: Update id=658108844 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:03,439 [INFO] aiogram.event: Update id=658108845 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:18,613 [INFO] aiogram.event: Update id=658108846 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:18,615 [INFO] aiogram.event: Update id=658108847 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:18,615 [INFO] aiogram.event: Update id=658108848 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:18,616 [INFO] aiogram.event: Update id=658108849 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:18,616 [INFO] aiogram.event: Update id=658108850 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:18,616 [INFO] aiogram.event: Update id=658108851 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:18,617 [INFO] aiogram.event: Update id=658108852 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:18,617 [INFO] aiogram.event: Update id=658108853 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:18,617 [INFO] aiogram.event: Update id=658108854 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:18,618 [INFO] aiogram.event: Update id=658108855 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:35,999 [INFO] aiogram.event: Update id=658108856 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:58:36,000 [INFO] aiogram.event: Update id=658108857 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:58:36,001 [INFO] aiogram.event: Update id=658108858 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:58:36,002 [INFO] aiogram.event: Update id=658108859 is not handled. Duration 14 ms by bot id=8918092936
+2026-07-04 18:58:36,002 [INFO] aiogram.event: Update id=658108860 is not handled. Duration 14 ms by bot id=8918092936
+2026-07-04 18:58:36,002 [INFO] aiogram.event: Update id=658108861 is not handled. Duration 14 ms by bot id=8918092936
+2026-07-04 18:58:36,002 [INFO] aiogram.event: Update id=658108862 is not handled. Duration 14 ms by bot id=8918092936
+2026-07-04 18:58:36,002 [INFO] aiogram.event: Update id=658108863 is not handled. Duration 14 ms by bot id=8918092936
+2026-07-04 18:58:36,002 [INFO] aiogram.event: Update id=658108864 is not handled. Duration 14 ms by bot id=8918092936
+2026-07-04 18:58:36,003 [INFO] aiogram.event: Update id=658108865 is not handled. Duration 14 ms by bot id=8918092936
+2026-07-04 18:58:51,696 [INFO] aiogram.event: Update id=658108866 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:58:51,697 [INFO] aiogram.event: Update id=658108867 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:58:51,698 [INFO] aiogram.event: Update id=658108868 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:58:51,698 [INFO] aiogram.event: Update id=658108869 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:58:51,698 [INFO] aiogram.event: Update id=658108870 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:58:51,698 [INFO] aiogram.event: Update id=658108871 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:58:51,699 [INFO] aiogram.event: Update id=658108872 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:58:51,700 [INFO] aiogram.event: Update id=658108873 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 18:58:51,700 [INFO] aiogram.event: Update id=658108874 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:58:51,700 [INFO] aiogram.event: Update id=658108875 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 18:59:07,650 [INFO] aiogram.event: Update id=658108876 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:07,650 [INFO] aiogram.event: Update id=658108877 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:07,650 [INFO] aiogram.event: Update id=658108878 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:07,650 [INFO] aiogram.event: Update id=658108879 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:07,651 [INFO] aiogram.event: Update id=658108880 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:07,651 [INFO] aiogram.event: Update id=658108881 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:07,651 [INFO] aiogram.event: Update id=658108882 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:07,651 [INFO] aiogram.event: Update id=658108883 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:07,651 [INFO] aiogram.event: Update id=658108884 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:07,652 [INFO] aiogram.event: Update id=658108885 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:24,664 [INFO] aiogram.event: Update id=658108886 is not handled. Duration 32 ms by bot id=8918092936
+2026-07-04 18:59:24,665 [INFO] aiogram.event: Update id=658108887 is not handled. Duration 32 ms by bot id=8918092936
+2026-07-04 18:59:24,666 [INFO] aiogram.event: Update id=658108888 is not handled. Duration 32 ms by bot id=8918092936
+2026-07-04 18:59:24,666 [INFO] aiogram.event: Update id=658108889 is not handled. Duration 32 ms by bot id=8918092936
+2026-07-04 18:59:24,666 [INFO] aiogram.event: Update id=658108890 is not handled. Duration 32 ms by bot id=8918092936
+2026-07-04 18:59:24,667 [INFO] aiogram.event: Update id=658108891 is not handled. Duration 32 ms by bot id=8918092936
+2026-07-04 18:59:24,667 [INFO] aiogram.event: Update id=658108892 is not handled. Duration 32 ms by bot id=8918092936
+2026-07-04 18:59:24,667 [INFO] aiogram.event: Update id=658108893 is not handled. Duration 32 ms by bot id=8918092936
+2026-07-04 18:59:24,667 [INFO] aiogram.event: Update id=658108894 is not handled. Duration 32 ms by bot id=8918092936
+2026-07-04 18:59:24,667 [INFO] aiogram.event: Update id=658108895 is not handled. Duration 32 ms by bot id=8918092936
+2026-07-04 18:59:49,626 [INFO] aiogram.event: Update id=658108896 is handled. Duration 467 ms by bot id=8918092936
+2026-07-04 18:59:55,889 [INFO] aiogram.event: Update id=658108897 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:55,890 [INFO] aiogram.event: Update id=658108898 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:55,892 [INFO] aiogram.event: Update id=658108899 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:55,893 [INFO] aiogram.event: Update id=658108900 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:55,893 [INFO] aiogram.event: Update id=658108901 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:55,896 [INFO] aiogram.event: Update id=658108902 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:55,897 [INFO] aiogram.event: Update id=658108903 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:55,899 [INFO] aiogram.event: Update id=658108904 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:55,900 [INFO] aiogram.event: Update id=658108905 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:55,900 [INFO] aiogram.event: Update id=658108906 is not handled. Duration 31 ms by bot id=8918092936
+2026-07-04 18:59:59,313 [INFO] aiogram.event: Update id=658108907 is handled. Duration 203 ms by bot id=8918092936
+2026-07-04 19:00:03,286 [INFO] aiogram.event: Update id=658108908 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 19:00:03,287 [INFO] aiogram.event: Update id=658108909 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 19:00:03,287 [INFO] aiogram.event: Update id=658108910 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 19:00:03,288 [INFO] aiogram.event: Update id=658108911 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 19:00:03,288 [INFO] aiogram.event: Update id=658108912 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 19:00:12,273 [INFO] aiogram.event: Update id=658108913 is handled. Duration 203 ms by bot id=8918092936
+2026-07-04 19:01:12,333 [INFO] aiogram.event: Update id=658108914 is handled. Duration 454 ms by bot id=8918092936
+2026-07-04 19:01:15,673 [INFO] aiogram.event: Update id=658108915 is handled. Duration 203 ms by bot id=8918092936
+2026-07-04 19:01:25,324 [INFO] aiogram.event: Update id=658108916 is handled. Duration 188 ms by bot id=8918092936
+2026-07-04 19:04:45,019 [INFO] aiogram.event: Update id=658108917 is handled. Duration 500 ms by bot id=8918092936
+2026-07-04 19:04:58,217 [INFO] aiogram.event: Update id=658108918 is handled. Duration 421 ms by bot id=8918092936
+2026-07-04 19:05:30,515 [INFO] aiogram.event: Update id=658108919 is handled. Duration 562 ms by bot id=8918092936
+2026-07-04 19:05:33,684 [INFO] aiogram.event: Update id=658108920 is handled. Duration 280 ms by bot id=8918092936
+2026-07-04 19:07:11,038 [INFO] aiogram.dispatcher: Polling stopped
+2026-07-04 19:07:11,290 [INFO] aiogram.dispatcher: Polling stopped for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:07:24,538 [INFO] __main__: Bot starting... Admin ID: 7379594136
+2026-07-04 19:07:24,547 [INFO] aiogram.dispatcher: Start polling
+2026-07-04 19:07:25,260 [INFO] aiogram.dispatcher: Run polling for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:08:21,268 [INFO] aiogram.event: Update id=658108921 is handled. Duration 578 ms by bot id=8918092936
+2026-07-04 19:08:23,521 [INFO] aiogram.event: Update id=658108922 is handled. Duration 187 ms by bot id=8918092936
+2026-07-04 19:08:28,520 [INFO] aiogram.event: Update id=658108923 is handled. Duration 344 ms by bot id=8918092936
+2026-07-04 19:11:23,231 [INFO] aiogram.event: Update id=658108924 is handled. Duration 514 ms by bot id=8918092936
+2026-07-04 19:13:09,653 [INFO] aiogram.event: Update id=658108925 is handled. Duration 437 ms by bot id=8918092936
+2026-07-04 19:13:13,235 [INFO] aiogram.event: Update id=658108926 is handled. Duration 187 ms by bot id=8918092936
+2026-07-04 19:13:30,499 [INFO] aiogram.event: Update id=658108927 is handled. Duration 561 ms by bot id=8918092936
+2026-07-04 19:14:02,211 [INFO] aiogram.event: Update id=658108928 is handled. Duration 485 ms by bot id=8918092936
+2026-07-04 19:15:47,470 [INFO] aiogram.event: Update id=658108929 is handled. Duration 625 ms by bot id=8918092936
+2026-07-04 19:16:00,434 [INFO] __main__: Processed file from user 6631234986 (аме): 16 messages
+2026-07-04 19:16:00,444 [INFO] aiogram.event: Update id=658108930 is handled. Duration 1765 ms by bot id=8918092936
+2026-07-04 19:19:16,534 [INFO] __main__: Bot starting... Admin ID: 7379594136
+2026-07-04 19:19:16,541 [INFO] aiogram.dispatcher: Start polling
+2026-07-04 19:19:17,089 [INFO] aiogram.dispatcher: Run polling for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:19:37,457 [INFO] aiogram.event: Update id=658108931 is handled. Duration 625 ms by bot id=8918092936
+2026-07-04 19:25:58,968 [INFO] aiogram.event: Update id=658108932 is handled. Duration 577 ms by bot id=8918092936
+2026-07-04 19:27:41,504 [INFO] aiogram.dispatcher: Polling stopped
+2026-07-04 19:27:41,764 [INFO] aiogram.dispatcher: Polling stopped for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:27:55,625 [INFO] __main__: Bot starting... Admin ID: 7379594136
+2026-07-04 19:27:55,628 [INFO] aiogram.dispatcher: Start polling
+2026-07-04 19:27:56,276 [INFO] aiogram.dispatcher: Run polling for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:28:34,458 [ERROR] __main__: Unexpected error
+Traceback (most recent call last):
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiohttp\streams.py", line 316, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 440, in handle_file
+    downloaded = await bot.download_file(tg_file.file_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 432, in download_file
+    return await self.__download_file_binary_io(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 367, in __download_file_binary_io
+    async for chunk in stream:
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 210, in stream_content
+    async for chunk in resp.content.iter_chunked(chunk_size):
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiohttp\streams.py", line 50, in __anext__
+    rv = await self.read_func()
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiohttp\streams.py", line 397, in read
+    await self._wait("read")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiohttp\streams.py", line 315, in _wait
+    with self._timer:
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiohttp\helpers.py", line 749, in __exit__
+    raise asyncio.TimeoutError from exc_val
+TimeoutError
+2026-07-04 19:28:35,078 [INFO] aiogram.event: Update id=658108933 is handled. Duration 33110 ms by bot id=8918092936
+2026-07-04 19:29:49,243 [INFO] __main__: Processed file from user 5838247852 (ꫀꪶ): 15235 messages
+2026-07-04 19:29:49,259 [INFO] aiogram.event: Update id=658108934 is handled. Duration 17733 ms by bot id=8918092936
+2026-07-04 19:33:52,092 [INFO] aiogram.event: Update id=658108935 is handled. Duration 734 ms by bot id=8918092936
+2026-07-04 19:33:58,877 [INFO] aiogram.event: Update id=658108936 is handled. Duration 467 ms by bot id=8918092936
+2026-07-04 19:35:11,620 [INFO] aiogram.event: Update id=658108937 is handled. Duration 577 ms by bot id=8918092936
+2026-07-04 19:35:17,555 [INFO] aiogram.event: Update id=658108938 is handled. Duration 203 ms by bot id=8918092936
+2026-07-04 19:38:33,020 [INFO] aiogram.event: Update id=658108939 is handled. Duration 609 ms by bot id=8918092936
+2026-07-04 19:39:51,854 [INFO] aiogram.dispatcher: Polling stopped
+2026-07-04 19:39:52,119 [INFO] aiogram.dispatcher: Polling stopped for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:40:08,247 [INFO] __main__: Bot starting... Admin ID: 7379594136
+2026-07-04 19:40:08,250 [INFO] aiogram.dispatcher: Start polling
+2026-07-04 19:40:08,796 [INFO] aiogram.dispatcher: Run polling for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:43:11,415 [INFO] aiogram.dispatcher: Polling stopped
+2026-07-04 19:43:11,679 [INFO] aiogram.dispatcher: Polling stopped for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:43:28,525 [INFO] __main__: Bot starting... Admin ID: 7379594136
+2026-07-04 19:43:28,526 [INFO] aiogram.dispatcher: Start polling
+2026-07-04 19:43:29,131 [INFO] aiogram.dispatcher: Run polling for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:44:41,604 [INFO] aiogram.event: Update id=658108940 is not handled. Duration 0 ms by bot id=8918092936
+2026-07-04 19:44:41,604 [ERROR] aiogram.event: Cause exception while process update id=658108940 by bot id=8918092936
+NameError: name 'status' is not defined
+Traceback (most recent call last):
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 246, in cmd_start
+    log_and_print(m.from_user, "Команда /start")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 197, in log_and_print
+    update_stats(action, details)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 85, in update_stats
+    if status == "ERROR":
+       ^^^^^^
+NameError: name 'status' is not defined
+2026-07-04 19:44:50,011 [INFO] aiogram.event: Update id=658108941 is not handled. Duration 14 ms by bot id=8918092936
+2026-07-04 19:44:50,011 [ERROR] aiogram.event: Cause exception while process update id=658108941 by bot id=8918092936
+NameError: name 'status' is not defined
+Traceback (most recent call last):
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 246, in cmd_start
+    log_and_print(m.from_user, "Команда /start")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 197, in log_and_print
+    update_stats(action, details)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 85, in update_stats
+    if status == "ERROR":
+       ^^^^^^
+NameError: name 'status' is not defined
+2026-07-04 19:44:52,231 [INFO] aiogram.event: Update id=658108942 is not handled. Duration 0 ms by bot id=8918092936
+2026-07-04 19:44:52,231 [ERROR] aiogram.event: Cause exception while process update id=658108942 by bot id=8918092936
+NameError: name 'status' is not defined
+Traceback (most recent call last):
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 269, in cmd_instruction
+    log_and_print(m.from_user, "Команда /инструкция")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 197, in log_and_print
+    update_stats(action, details)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 85, in update_stats
+    if status == "ERROR":
+       ^^^^^^
+NameError: name 'status' is not defined
+2026-07-04 19:45:07,733 [INFO] aiogram.event: Update id=658108943 is not handled. Duration 15 ms by bot id=8918092936
+2026-07-04 19:45:07,733 [ERROR] aiogram.event: Cause exception while process update id=658108943 by bot id=8918092936
+NameError: name 'status' is not defined
+Traceback (most recent call last):
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 269, in cmd_instruction
+    log_and_print(m.from_user, "Команда /инструкция")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 197, in log_and_print
+    update_stats(action, details)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 85, in update_stats
+    if status == "ERROR":
+       ^^^^^^
+NameError: name 'status' is not defined
+2026-07-04 19:46:30,620 [INFO] aiogram.event: Update id=658108944 is not handled. Duration 0 ms by bot id=8918092936
+2026-07-04 19:46:30,620 [ERROR] aiogram.event: Cause exception while process update id=658108944 by bot id=8918092936
+NameError: name 'status' is not defined
+Traceback (most recent call last):
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 246, in cmd_start
+    log_and_print(m.from_user, "Команда /start")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 197, in log_and_print
+    update_stats(action, details)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 85, in update_stats
+    if status == "ERROR":
+       ^^^^^^
+NameError: name 'status' is not defined
+2026-07-04 19:49:09,672 [INFO] aiogram.event: Update id=658108945 is not handled. Duration 47 ms by bot id=8918092936
+2026-07-04 19:49:09,672 [ERROR] aiogram.event: Cause exception while process update id=658108945 by bot id=8918092936
+NameError: name 'status' is not defined
+Traceback (most recent call last):
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 380, in handle_file
+    log_and_print(m.from_user, "📤 Загрузка файла", f"{file_name} ({size_str})")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 197, in log_and_print
+    update_stats(action, details)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 85, in update_stats
+    if status == "ERROR":
+       ^^^^^^
+NameError: name 'status' is not defined
+2026-07-04 19:49:15,552 [INFO] aiogram.event: Update id=658108946 is not handled. Duration 0 ms by bot id=8918092936
+2026-07-04 19:49:15,553 [ERROR] aiogram.event: Cause exception while process update id=658108946 by bot id=8918092936
+NameError: name 'status' is not defined
+Traceback (most recent call last):
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 246, in cmd_start
+    log_and_print(m.from_user, "Команда /start")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 197, in log_and_print
+    update_stats(action, details)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 85, in update_stats
+    if status == "ERROR":
+       ^^^^^^
+NameError: name 'status' is not defined
+2026-07-04 19:49:46,757 [INFO] aiogram.event: Update id=658108947 is not handled. Duration 0 ms by bot id=8918092936
+2026-07-04 19:49:46,757 [ERROR] aiogram.event: Cause exception while process update id=658108947 by bot id=8918092936
+NameError: name 'status' is not defined
+Traceback (most recent call last):
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 246, in cmd_start
+    log_and_print(m.from_user, "Команда /start")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 197, in log_and_print
+    update_stats(action, details)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 85, in update_stats
+    if status == "ERROR":
+       ^^^^^^
+NameError: name 'status' is not defined
+2026-07-04 19:49:53,746 [INFO] aiogram.event: Update id=658108948 is not handled. Duration 30 ms by bot id=8918092936
+2026-07-04 19:49:53,747 [ERROR] aiogram.event: Cause exception while process update id=658108948 by bot id=8918092936
+NameError: name 'status' is not defined
+Traceback (most recent call last):
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 269, in cmd_instruction
+    log_and_print(m.from_user, "Команда /инструкция")
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 197, in log_and_print
+    update_stats(action, details)
+  File "C:\Users\рс\Desktop\jsonconverter_bot\main.py", line 85, in update_stats
+    if status == "ERROR":
+       ^^^^^^
+NameError: name 'status' is not defined
+2026-07-04 19:50:28,755 [INFO] aiogram.dispatcher: Polling stopped
+2026-07-04 19:50:29,018 [INFO] aiogram.dispatcher: Polling stopped for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:50:40,925 [INFO] __main__: Bot starting... Admin ID: 7379594136
+2026-07-04 19:50:40,928 [INFO] aiogram.dispatcher: Start polling
+2026-07-04 19:50:41,487 [INFO] aiogram.dispatcher: Run polling for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:51:17,400 [INFO] __main__: 5578124279 Команда /start  OK
+2026-07-04 19:51:17,927 [INFO] aiogram.event: Update id=658108949 is handled. Duration 530 ms by bot id=8918092936
+2026-07-04 19:52:22,894 [INFO] __main__: 5578124279 Команда /stats Всего пользователей: 37 OK
+2026-07-04 19:52:23,752 [INFO] aiogram.event: Update id=658108950 is handled. Duration 889 ms by bot id=8918092936
+2026-07-04 19:52:38,491 [INFO] __main__: 5578124279 Команда /инструкция  OK
+2026-07-04 19:52:38,678 [INFO] aiogram.event: Update id=658108951 is handled. Duration 187 ms by bot id=8918092936
+2026-07-04 19:54:31,812 [INFO] aiogram.dispatcher: Polling stopped
+2026-07-04 19:54:32,071 [INFO] aiogram.dispatcher: Polling stopped for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:54:41,103 [INFO] __main__: Bot starting... Admin ID: 7379594136
+2026-07-04 19:54:41,103 [INFO] aiogram.dispatcher: Start polling
+2026-07-04 19:54:41,639 [INFO] aiogram.dispatcher: Run polling for bot @jsonConverter_bot id=8918092936 - 'ChatExplorer'
+2026-07-04 19:57:16,632 [INFO] __main__: 5405134278 Команда /start  OK
+2026-07-04 19:57:17,128 [INFO] aiogram.event: Update id=658108952 is handled. Duration 561 ms by bot id=8918092936
+2026-07-04 19:57:23,341 [INFO] __main__: 5405134278 Команда /инструкция  OK
+2026-07-04 19:57:23,871 [INFO] aiogram.event: Update id=658108953 is handled. Duration 562 ms by bot id=8918092936
+2026-07-04 19:58:45,473 [INFO] __main__: 5036632725 Команда /start  OK
+2026-07-04 19:58:46,068 [INFO] aiogram.event: Update id=658108954 is handled. Duration 609 ms by bot id=8918092936
+2026-07-04 19:58:52,996 [INFO] __main__: 5036632725 Команда /инструкция  OK
+2026-07-04 19:58:53,212 [INFO] aiogram.event: Update id=658108955 is handled. Duration 235 ms by bot id=8918092936
+2026-07-04 20:04:32,992 [INFO] __main__: 7757636992 Команда /start  OK
+2026-07-04 20:04:33,466 [INFO] aiogram.event: Update id=658108956 is handled. Duration 485 ms by bot id=8918092936
