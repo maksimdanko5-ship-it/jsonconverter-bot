@@ -29,11 +29,29 @@ from rich.table import Table
 from rich import box
 from rich.align import Align
 
+# ============================================================
+# 👇 ВСТАВЬ ЭТО СЮДА (ПОСЛЕ ВСЕХ ИМПОРТОВ, ДО ЛЮБОЙ ЛОГИКИ)
+# ============================================================
+from flask import Flask
+import threading
+
+app = Flask(__name__)
+
+@app.route('/')
+def wake_up():
+    return "I'm alive!", 200
+
+def run_web():
+    app.run(host='0.0.0.0', port=10000)
+
+# Запускаем веб-сервер в фоновом потоке
+threading.Thread(target=run_web, daemon=True).start()
+# ============================================================
+
 # ------------------------------------------------------------
 # 1. НАСТРОЙКА КОНСОЛИ
 # ------------------------------------------------------------
 console = Console()
-
 # Логи пишем только в файл (чтобы не дублировать в консоль)
 logging.basicConfig(
     level=logging.INFO,
