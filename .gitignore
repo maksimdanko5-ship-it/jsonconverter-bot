@@ -1,7 +1,9 @@
-"__pycache__/" 
-"venv/" 
-".env" 
-"*.log" 
-"actions_log.csv" 
-"users.json" 
-"temp/" 
+__pycache__/
+venv/
+.env
+*.log
+actions_log.csv
+users.json
+temp/
+users.json.tmp
+bot.log
