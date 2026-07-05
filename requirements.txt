@@ -3,3 +3,4 @@ python-dotenv
 rich
 flask
 aiohttp
+orjson

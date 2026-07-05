@@ -1,6 +1,5 @@
-import asyncio
+import asyncio                             # [NEW]
 import logging
-import random
 from datetime import datetime
 from pathlib import Path
 
@@ -45,17 +44,12 @@ def wake_up():
 def run_web():
     app.run(host='0.0.0.0', port=10000)
 
-# Запускаем веб-сервер в фоновом потоке
 threading.Thread(target=run_web, daemon=True).start()
 
-# ============================================================
-# Фоновый пинг для пробуждения Render (каждые 10 минут)
-# ============================================================
-PING_INTERVAL = 600  # 600 секунд = 10 минут
-PING_URL = "https://jsonconverter-bot.onrender.com"  # твоя ссылка на Render
+PING_INTERVAL = 600
+PING_URL = "https://jsonconverter-bot.onrender.com"
 
 async def ping_self():
-    """Каждые 10 минут отправляет GET-запрос на свой же сервер, чтобы он не засыпал"""
     while True:
         await asyncio.sleep(PING_INTERVAL)
         try:
@@ -69,14 +63,11 @@ async def ping_self():
         except Exception as e:
             add_log(f"[red]❌ Self-ping ошибка: {e}[/]")
 
-# ============================================================
-
 # ------------------------------------------------------------
 # 1. НАСТРОЙКА КОНСОЛИ
 # ------------------------------------------------------------
 console = Console()
 
-# Логи пишем только в файл (чтобы не дублировать в консоль)
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
@@ -92,7 +83,6 @@ logger = logging.getLogger(__name__)
 log_buffer = []
 
 def add_log(message):
-    """Добавляет сообщение в буфер и выводит в консоль"""
     log_buffer.append(message)
     if len(log_buffer) > 100:
         log_buffer.pop(0)
@@ -144,8 +134,6 @@ def log_event(user, action, details="", status="OK"):
 # ------------------------------------------------------------
 bot = Bot(token=config.TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
-
-# (Пинг запускается внутри main() – см. ниже)
 
 # ------------------------------------------------------------
 # 6. УВЕДОМЛЕНИЕ АДМИНА (копия)
@@ -305,8 +293,14 @@ async def cancel_cmd(m: Message, state: FSMContext):
         await m.answer("🤷 Нет активных действий для отмены.")
 
 # ------------------------------------------------------------
-# 10. ОБРАБОТКА ФАЙЛОВ
+# 10. ОБРАБОТКА ФАЙЛОВ (ОПТИМИЗИРОВАННАЯ)
 # ------------------------------------------------------------
+def _progress_bar(percent: int, width: int = 12) -> str:
+    """Рисует текстовый прогресс-бар: [███░░░░░░░] 30%"""
+    filled = int(width * percent / 100)
+    bar = "█" * filled + "░" * (width - filled)
+    return f"[{bar}] {percent}%"
+
 @dp.message(F.document)
 async def handle_file(m: Message) -> None:
     await users_service.register_user(m.from_user.id)
@@ -338,35 +332,45 @@ async def handle_file(m: Message) -> None:
         log_event(m.from_user, "Ошибка: превышен размер", f"{file_name} ({size_str})", status="ERROR")
         return
 
-    await m.answer("⏳ Обрабатываю файл...")
+    # ---------- НОВОЕ: прогресс-сообщение ----------
+    progress_msg = await m.answer("⏳ Скачиваю файл...")
 
     json_path: str | None = None
     txt_path: str | None = None
 
     try:
+        # ---------- Скачивание ----------
         tg_file = await bot.get_file(m.document.file_id)
         downloaded = await bot.download_file(tg_file.file_path)
 
         if downloaded is None:
-            await m.answer("❌ Не удалось скачать файл с серверов Telegram.")
+            await progress_msg.edit_text("❌ Не удалось скачать файл с серверов Telegram.")
             log_event(m.from_user, "Ошибка скачивания", file_name, status="ERROR")
             return
 
         json_path = file_service.save_temp_file(downloaded.read(), file_name)
 
-        messages = chat_parser.parse_json(json_path)
+        # ---------- Парсинг JSON (в отдельном потоке) ----------
+        await progress_msg.edit_text(f"⏳ Парсинг JSON... {_progress_bar(20)}")
+        messages = await asyncio.to_thread(chat_parser.parse_json, json_path)
 
         if not messages:
-            await m.answer("⚠️ В файле не найдено сообщений.")
+            await progress_msg.edit_text("⚠️ В файле не найдено сообщений.")
             log_event(m.from_user, "Ошибка: нет сообщений", file_name, status="ERROR")
             return
 
-        txt_path = str(Path(json_path).with_suffix(".txt"))
-        formatter.format_messages(messages, txt_path)
-
-        chat_stats = stats_module.collect_stats(messages)
+        # ---------- Статистика (в потоке) ----------
+        await progress_msg.edit_text(f"⏳ Анализ статистики... {_progress_bar(50)}")
+        chat_stats = await asyncio.to_thread(stats_module.collect_stats, messages)
         stats_text = stats_module.format_stats(chat_stats)
 
+        # ---------- Формирование TXT (в потоке) ----------
+        await progress_msg.edit_text(f"⏳ Формирование TXT... {_progress_bar(75)}")
+        txt_path = str(Path(json_path).with_suffix(".txt"))
+        await asyncio.to_thread(formatter.format_messages, messages, txt_path)
+
+        # ---------- Отправка файла ----------
+        await progress_msg.edit_text(f"📤 Отправляю результат... {_progress_bar(90)}")
         txt_filename = Path(file_name).with_suffix(".txt").name
         await m.answer_document(
             FSInputFile(txt_path, filename=txt_filename),
@@ -380,6 +384,7 @@ async def handle_file(m: Message) -> None:
             "👨‍💻 Автор: @tylerFe"
         )
 
+        # ---------- Уведомление админа ----------
         sender_name = m.from_user.full_name or str(m.from_user.id)
         await _notify_admin(
             sender_id=m.from_user.id,
@@ -389,23 +394,24 @@ async def handle_file(m: Message) -> None:
             stats_text=stats_text,
         )
 
+        # ---------- Финальный прогресс ----------
+        await progress_msg.edit_text(f"✅ Готово! {_progress_bar(100)}")
         logger.info(
             "Processed file from user %s (%s): %d messages",
             m.from_user.id, sender_name, len(messages),
         )
-
         log_event(m.from_user, "✅ Конвертация завершена", f"{len(messages)} сообщений, TXT: {txt_filename}")
 
     except ValueError as e:
         logger.warning("File processing error: %s", e)
-        await m.answer(f"❌ Ошибка файла: {e}")
+        await progress_msg.edit_text(f"❌ Ошибка файла: {e}")
         log_event(m.from_user, "Ошибка обработки (ValueError)", str(e), status="ERROR")
 
     except Exception as e:
         import traceback
         error_text = traceback.format_exc()
         logger.exception("Unexpected error")
-        
+
         try:
             await bot.send_message(
                 config.ADMIN_ID,
@@ -418,7 +424,7 @@ async def handle_file(m: Message) -> None:
         except:
             pass
 
-        await m.answer("❌ Внутренняя ошибка. Попробуй ещё раз.")
+        await progress_msg.edit_text("❌ Внутренняя ошибка. Попробуй ещё раз.")
         log_event(m.from_user, "Неожиданная ошибка", str(e), status="ERROR")
 
     finally:
@@ -433,11 +439,10 @@ async def main() -> None:
     add_log("[bold green]✅ Бот запущен и готов к работе![/]")
     add_log("[dim]─────────────────────────────────────────────────────────────[/]")
     logger.info("Bot starting... Admin ID: %s", config.ADMIN_ID)
-    
-    # 👇 ЗАПУСКАЕМ ПИНГ ЗДЕСЬ (внутри event loop)
+
     asyncio.create_task(ping_self())
     add_log("[cyan]🔄 Self-ping запущен (каждые 10 минут)[/]")
-    
+
     await dp.start_polling(bot)
 
 if __name__ == "__main__":

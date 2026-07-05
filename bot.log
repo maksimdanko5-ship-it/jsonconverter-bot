@@ -1102,3 +1102,45 @@ NameError: name 'status' is not defined
 2026-07-04 19:58:53,212 [INFO] aiogram.event: Update id=658108955 is handled. Duration 235 ms by bot id=8918092936
 2026-07-04 20:04:32,992 [INFO] __main__: 7757636992 Команда /start  OK
 2026-07-04 20:04:33,466 [INFO] aiogram.event: Update id=658108956 is handled. Duration 485 ms by bot id=8918092936
+2026-07-04 20:08:32,618 [INFO] __main__: 8501318219 Команда /start  OK
+2026-07-04 20:08:33,149 [INFO] aiogram.event: Update id=658108957 is handled. Duration 578 ms by bot id=8918092936
+2026-07-04 20:08:37,866 [INFO] __main__: 8501318219 Команда /start  OK
+2026-07-04 20:08:38,062 [INFO] aiogram.event: Update id=658108958 is handled. Duration 219 ms by bot id=8918092936
+2026-07-04 20:08:39,119 [INFO] __main__: 1957811714 Команда /start  OK
+2026-07-04 20:08:39,344 [INFO] aiogram.event: Update id=658108959 is handled. Duration 234 ms by bot id=8918092936
+2026-07-04 20:08:42,383 [INFO] __main__: 8501318219 Команда /инструкция  OK
+2026-07-04 20:08:42,613 [INFO] aiogram.event: Update id=658108960 is handled. Duration 343 ms by bot id=8918092936
+2026-07-04 20:08:51,806 [INFO] __main__: 1957811714 Команда /stats Всего пользователей: 42 OK
+2026-07-04 20:08:52,020 [INFO] aiogram.event: Update id=658108961 is handled. Duration 250 ms by bot id=8918092936
+2026-07-04 20:08:55,780 [INFO] __main__: 1957811714 Команда /инструкция  OK
+2026-07-04 20:08:56,163 [INFO] aiogram.event: Update id=658108962 is handled. Duration 390 ms by bot id=8918092936
+2026-07-04 20:10:00,478 [INFO] __main__: 7272776125 Команда /start  OK
+2026-07-04 20:10:00,953 [INFO] aiogram.event: Update id=658108963 is handled. Duration 485 ms by bot id=8918092936
+2026-07-04 20:10:04,901 [INFO] __main__: 7272776125 Команда /инструкция  OK
+2026-07-04 20:10:05,067 [INFO] aiogram.event: Update id=658108964 is handled. Duration 188 ms by bot id=8918092936
+2026-07-04 20:12:47,361 [INFO] __main__: 1457710817 Команда /start  OK
+2026-07-04 20:12:48,133 [INFO] aiogram.event: Update id=658108965 is handled. Duration 780 ms by bot id=8918092936
+2026-07-04 20:12:55,884 [INFO] __main__: 1457710817 Команда /инструкция  OK
+2026-07-04 20:12:56,093 [INFO] aiogram.event: Update id=658108966 is handled. Duration 234 ms by bot id=8918092936
+2026-07-04 20:17:51,768 [INFO] __main__: 8775695692 Команда /start  OK
+2026-07-04 20:17:52,304 [INFO] aiogram.event: Update id=658108967 is handled. Duration 547 ms by bot id=8918092936
+2026-07-04 20:17:54,712 [INFO] __main__: 8775695692 Команда /инструкция  OK
+2026-07-04 20:17:54,911 [INFO] aiogram.event: Update id=658108968 is handled. Duration 219 ms by bot id=8918092936
+2026-07-04 20:19:34,531 [INFO] __main__: 7523584841 Команда /start  OK
+2026-07-04 20:19:37,270 [INFO] aiogram.event: Update id=658108969 is handled. Duration 2750 ms by bot id=8918092936
+2026-07-04 20:19:39,950 [INFO] __main__: 7523584841 Команда /инструкция  OK
+2026-07-04 20:19:40,205 [INFO] aiogram.event: Update id=658108970 is handled. Duration 281 ms by bot id=8918092936
+2026-07-04 20:24:29,382 [INFO] __main__: 5486679610 Команда /start  OK
+2026-07-04 20:24:29,869 [INFO] aiogram.event: Update id=658108971 is handled. Duration 515 ms by bot id=8918092936
+2026-07-04 20:24:36,551 [INFO] __main__: 5486679610 Команда /инструкция  OK
+2026-07-04 20:24:36,799 [INFO] aiogram.event: Update id=658108972 is handled. Duration 280 ms by bot id=8918092936
+2026-07-04 20:27:22,578 [INFO] __main__: 6687671212 Команда /start  OK
+2026-07-04 20:27:23,109 [INFO] aiogram.event: Update id=658108973 is handled. Duration 546 ms by bot id=8918092936
+2026-07-04 20:27:28,067 [INFO] __main__: 6687671212 Команда /инструкция  OK
+2026-07-04 20:27:28,462 [INFO] aiogram.event: Update id=658108974 is handled. Duration 437 ms by bot id=8918092936
+2026-07-04 20:30:06,473 [INFO] __main__: 7276458504 Команда /start  OK
+2026-07-04 20:30:06,945 [INFO] aiogram.event: Update id=658108975 is handled. Duration 484 ms by bot id=8918092936
+2026-07-04 20:33:01,271 [INFO] __main__: 7248663267 Команда /start  OK
+2026-07-04 20:33:01,809 [INFO] aiogram.event: Update id=658108976 is handled. Duration 578 ms by bot id=8918092936
+2026-07-04 20:33:06,813 [INFO] __main__: 7248663267 Команда /инструкция  OK
+2026-07-04 20:33:07,089 [INFO] aiogram.event: Update id=658108977 is handled. Duration 296 ms by bot id=8918092936
