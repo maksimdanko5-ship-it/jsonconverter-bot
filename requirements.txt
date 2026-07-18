@@ -1,6 +1,7 @@
-aiogram==3.13.1
+telethon
 python-dotenv
 rich
 flask
 aiohttp
 orjson
+cryptg

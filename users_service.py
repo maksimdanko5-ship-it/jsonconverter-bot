@@ -63,3 +63,11 @@ async def register_user(user_id: int) -> bool:
 async def get_users_count() -> int:
     async with _lock:
         return len(_load())
+
+
+# [ДОБАВЛЕНО] Используется командой /broadcast — переиспользует ту же базу
+# пользователей (users.json), без изменения структуры хранения.
+async def get_all_user_ids() -> list[int]:
+    """Возвращает отсортированный список ID всех пользователей, писавших боту."""
+    async with _lock:
+        return sorted(_load())

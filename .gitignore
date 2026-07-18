@@ -7,3 +7,5 @@ users.json
 temp/
 users.json.tmp
 bot.log
+*.session
+*.session-journal
